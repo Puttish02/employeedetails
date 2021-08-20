@@ -1,0 +1,34 @@
+package classproject6;
+
+import java.util.Scanner;
+
+public class details {
+    String name;
+    int year;
+    String address;
+
+}
+class Main{
+    public static void main(String [ ]args){
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("enter num of employess");
+        int k = sc.nextInt();
+        details emp[] = new details[k];
+        for (int i =0;i<k;i++){
+            emp[i] = new details();
+            System.out.println("enter"+(i+1)+"employee data:");
+            System.out.print("enter employee name:");
+            emp[i].name = sc.next();
+            System.out.print("\nenter employee joining year:");
+            emp[i].year = sc.nextInt();
+            System.out.print("\nenter employee addreess:");
+            emp[i].address= sc.next();
+        }
+        System.out.println("\n\n=========all employee details are:=======\n");
+        for (int i=0;i<k;i++) {
+            System.out.println("employee name,year of joining and address:" + emp[i].name + " \n" + emp[i].year + " \n" + emp[i].address );
+        }
+        }
+    }
+
